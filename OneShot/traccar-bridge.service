@@ -1,0 +1,28 @@
+[Unit]
+Description=FindMy -> Traccar bridge (beacon)
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/traccar
+
+# === anisette: MUST match the anisette that minted auth.json, or every fetch 401s ===
+#   http://localhost:6969       -> you re-logged-in on the Pi with its OWN anisette (standalone)
+#   http://localhost:6969     -> you're using the DESKTOP's anisette + the token copied from it
+# Public servers (ani.sidestore.io) do NOT work for fetching - the token is bound to its anisette.
+Environment=ANISETTE_URL=http://localhost:6969
+
+Environment=TRACCAR_URL=http://localhost:5055
+Environment=TRACCAR_DEVICE_ID=000
+Environment=POLL_INTERVAL=1800
+Environment=LOOKBACK_HOURS=24
+Environment=LOG_LEVEL=INFO
+
+ExecStart=/usr/bin/python3 /home/pi/traccar/traccar-bridge.py
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
