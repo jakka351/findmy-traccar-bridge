@@ -1,4 +1,4 @@
-# One Shot Python script for n00bs 
+# One Shot Python script for RPI
 
   `traccar_bridge.py`  
 
