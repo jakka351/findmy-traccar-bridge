@@ -38,17 +38,17 @@
 
  ---------------------------------------------------------------------------
  ### CONFIG  (all overridable by environment variables / systemd Environment=)
- ---------------------------------------------------------------------------
-  TRACCAR_URL        OsmAnd endpoint            (default http://localhost:5055)
-  TRACCAR_DEVICE_ID  Traccar device identifier  (default ******)
-  ANISETTE_URL       anisette server            (default http://localhost:6969)
-  POLL_INTERVAL      seconds between polls       (default 1800 = 30 min)
-  LOOKBACK_HOURS     report window each poll     (default 24)
-  MIN_FIX_GAP        thin track: min seconds between posted fixes (default 0 = all)
-  SECOND_FACTOR      sms | trusted_device        (default sms, used only at --login)
-  STATE_DIR          where auth.json/state live  (default: this script's folder)
-  LOG_LEVEL          DEBUG | INFO | WARNING      (default INFO)
-  BRIDGE_PRIVATE_KEYS  comma-sep base64 privkeys (default: the 16 removed below)
-  KEYS_FILE          path to a *_devices.json    (alternative key source)
-
+ ---------------------------------------------------------------------------  
+  TRACCAR_URL        OsmAnd endpoint            (default http://localhost:5055)  
+  TRACCAR_DEVICE_ID  Traccar device identifier  (default ******)  
+  ANISETTE_URL       anisette server            (default http://localhost:6969)  
+  POLL_INTERVAL      seconds between polls       (default 1800 = 30 min)  
+  LOOKBACK_HOURS     report window each poll     (default 24)  
+  MIN_FIX_GAP        thin track: min seconds between posted fixes (default 0 = all)  
+  SECOND_FACTOR      sms | trusted_device        (default sms, used only at --login)  
+  STATE_DIR          where auth.json/state live  (default: this script's folder)  
+  LOG_LEVEL          DEBUG | INFO | WARNING      (default INFO)  
+  BRIDGE_PRIVATE_KEYS  comma-sep base64 privkeys (default: the 16 removed below)  
+  KEYS_FILE          path to a *_devices.json    (alternative key source)  
+  
   
