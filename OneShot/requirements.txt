@@ -1,0 +1,5 @@
+requests
+cryptography
+srp
+pbkdf2
+pycryptodome
